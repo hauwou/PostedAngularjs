@@ -1,0 +1,19 @@
+<div class="container col-md-12 col-xs-12" ng-controller="signInCtrl">
+      <form ng-submit="submitPost()"  >
+        <div class="row">
+          <div class="col-md-5 col-xs-8">
+            <input type="text" ng-model="post.title" placeholder="Title" class="form-control" ng-model="post.title" />
+          </div>
+          <div class="col-md-5 col-xs-8">
+            <input type="text" ng-model="post.url" placeholder="URL" class="form-control" ng-model="post.url" />
+          </div>
+          <div class="col-md-2 col-xs-12">
+             <input type="submit" value="Add Post" class="btn btn-info" ng-disabled="!signedIn()" ng-hide="!signedIn()" />
+              <a class="btn btn-info " href="#/login" ng-show="!signedIn()">Sign In to Post </a>
+          </div>
+
+        </div>
+
+
+      </form>
+    </div>
